@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cookie Clicker</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="index.js"></script>
+    
+    <h1>Cookie Clicker</h1>
+    <img src="http://images.clipartpanda.com/chocolate-chip-cookie-clipart-mordida_do_biscoito_dos_desenhos_animados_escultura_fotografias-r56b8af72f9664abab0be513d37b081d1_x7sa6_8byvr_512.jpg" onclick="bakeCookie();" />
+
+    <div id="help">
+        <p>Click the cookie to bake a cookie!</p>
+        <p>If you have enough cookies, the $$$ button will turn green. Click it to buy an item!</p>
+        <p>Scroll down to buy more items!</p>
+    </div>
+    
+    <h4>Cookies:</h4>
+    <h2 id="cookieCount"></h2>
+    
+    <h4>Stats</h4>
+    <p>Cookies per second: <var id="cps"></var></p>
+    <p>Cookies per click: <var id="cpc"></var></p>
+    
+    <h4>Autoclick Items</h4>
+    <table id="acTable"></table>
+    
+    <h4>Multiclick Items</h4>
+    <table id="mcTable"></table>
+
+  </body>
+</html>
