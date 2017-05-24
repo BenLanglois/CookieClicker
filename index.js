@@ -1,91 +1,14 @@
-var cookies = 0;
-var cps = 0;
-var cpc = 1;
-var showHelp = true;
-
-/*
-Copy for new item:
-,
-  {
-    name: "",
-    quantity: 0,
-    initialCost: #,
-    rate: #,
-    description: ""
-  }
-*/
-
-var autoclickItems = [
-  {
-    name: "Pointer",
-    quantity: 0,
-    initialCost: 10,
-    rate: 1,
-    description: "More cursors, more cookies!"
-  },
-  {
-    name: "Gramma",
-    quantity: 0,
-    initialCost: 250,
-    rate: 5,
-    description: "Who doesn't love grammas?"
-  },
-  {
-    name: "Cookie Tree",
-    quantity: 0,
-    initialCost: 5000,
-    rate: 25,
-    description: "Whoever said that cookies don't grow on trees?"
-  },
-  {
-    name: "Cookie Farm",
-    quantity: 0,
-    initialCost: 12345,
-    rate: 100,
-    description: "Plant those cookie seeds!"
-  }
-];
-
-var multiclickItems = [
-  {
-    name: "Candle",
-    quantity: 0,
-    initialCost: 100,
-    rate: 1,
-    description: "Heat up your cookie oven... with a candle!"
-  },
-  {
-    name: "Wood",
-    quantity: 0,
-    initialCost: 1337,
-    rate: 5,
-    description: "Your oven will burn hotter with wood!"
-  },
-  {
-    name: "Coal",
-    quantity: 0,
-    initialCost: 25000,
-    rate: 15,
-    description: "Burn those fossil fuels!"
-  },
-  {
-    name: "Hydrogen",
-    quantity: 0,
-    initialCost: 666666,
-    rate: 25,
-    description: "Explosive!"
-  }
-];
-
 for (var index in autoclickItems) {
   item = autoclickItems[index];
   item.cost = item.initialCost;
-} // Add cost property
+  item.quantity = 0;
+} // Add cost & quantity properties
 
 for (var index in multiclickItems) {
   item = multiclickItems[index];
   item.cost = item.initialCost;
-} // Add cost property
+  item.quantity = 0;
+} // Add cost & quantity properties
 
 window.onload = function() {
   document.getElementById("cookieCount").innerHTML = cookies;
