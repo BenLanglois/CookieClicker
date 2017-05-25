@@ -16,7 +16,12 @@ window.onload = function() {
   document.getElementById("cpc").innerHTML = cpc;
   createACT();
   createMCT();
+  updateSelect();
 };
+
+function updateSelect() {
+  document.getElementById("img").src = images[document.getElementById("select").value]
+}
 
 function bakeCookie() {
   cookies += cpc;
