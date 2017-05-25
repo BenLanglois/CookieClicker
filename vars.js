@@ -3,6 +3,12 @@ var cps = 0;
 var cpc = 1;
 var showHelp = true;
 
+var images = {
+  chocolateChip: "http://images.clipartpanda.com/chocolate-chip-cookie-clipart-mordida_do_biscoito_dos_desenhos_animados_escultura_fotografias-r56b8af72f9664abab0be513d37b081d1_x7sa6_8byvr_512.jpg",
+  oreo: "http://cdn.skim.gs/image/upload/v1456337658/msi/oreo-cookie-isolated_s9xwjo.jpg",
+  oatmealRaisin: "https://soulfullysweet.com/wp-content/uploads/2015/05/crop-oatmeal-cookie.jpg"
+}
+
 /*
 Copy for new item:
 ,
