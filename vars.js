@@ -55,7 +55,7 @@ var autoclickItems = [
   {
     name: "Cookie Mine",
     initialCost: 2000000,
-    rate: 1200,
+    rate: 3000,
     description: "As good as gold!"
   }
 ];
@@ -94,7 +94,7 @@ var multiclickItems = [
   {
     name: "C4",
     initialCost: 31415926,
-    rate: 1500,
+    rate: 2500,
     description: "Caution: Explosive."
   }
 ];
