@@ -1,15 +1,17 @@
+* {
+  text-align: center;
+}
+
 body {
   background-color: beige;
 }
 
 h1, h2 {
   font-family: "Arial Rounded MT Bold";
-  text-align: center;
 }
 
 h4 {
   font-family: "Arial Black";
-  text-align: center;
   color: darkred;
 }
 
@@ -43,7 +45,6 @@ tr:nth-child(odd) {
 p, var, th, td {
   font-family: Arial;
   font-style: normal;
-  text-align: center;
 }
 
 img {        
