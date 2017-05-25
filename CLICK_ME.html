@@ -11,7 +11,13 @@
     <script src="index.js"></script>
     
     <h1>Cookie Clicker</h1>
-    <img src="http://images.clipartpanda.com/chocolate-chip-cookie-clipart-mordida_do_biscoito_dos_desenhos_animados_escultura_fotografias-r56b8af72f9664abab0be513d37b081d1_x7sa6_8byvr_512.jpg" onclick="bakeCookie();" />
+    <img id="img" onclick="bakeCookie();" />
+
+    <select id="select" onchange="updateSelect();">
+        <option value="chocolateChip" selected="selected">Chocolate Chip</option>
+        <option value="oreo">Oreo</option>
+        <option value="oatmealRaisin">Oatmeal Raisin</option>
+    </select>
 
     <div id="help">
         <p>Click the cookie to bake a cookie!</p>
