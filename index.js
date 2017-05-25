@@ -21,15 +21,13 @@ window.onload = function() {
 function bakeCookie() {
   cookies += cpc;
   document.getElementById("cookieCount").innerHTML = cookies;
-  updateACB();
-  updateMCB();
+  updateBuy();
 }
 
 setInterval(function() {
   cookies += cps; // Autoclicks
   document.getElementById("cookieCount").innerHTML = cookies;
-  updateACB();
-  updateMCB();
+  updateBuy();
   if (showHelp && cookies >= 100) {
     document.getElementById("help").style.display="none";
     showHelp = false;
@@ -102,7 +100,7 @@ function buyAutoclick(index) {
     item.cost = Math.floor(item.initialCost * Math.pow(3, 0.1 * item.quantity));
     cps += item.rate;
     updateACT();
-    updateACB();
+    updateBuy();
   }
 }
 
@@ -114,11 +112,11 @@ function buyMulticlick(index) {
     item.cost = Math.floor(item.initialCost * Math.pow(3, 0.1 * item.quantity));
     cpc += item.rate;
     updateMCT();
-    updateMCB();
+    updateBuy();
   }
 }
 
-function updateACB() {
+function updateBuy() {
   for (var index in autoclickItems) {
     var item = autoclickItems[index];
     if (cookies >= item.cost) {
@@ -127,9 +125,7 @@ function updateACB() {
       document.getElementById("buy" + item.name).style.backgroundColor = "red";
     }
   }
-}
 
-function updateMCB() {
   for (var index in multiclickItems) {
     var item = multiclickItems[index];
     if (cookies >= item.cost) {
