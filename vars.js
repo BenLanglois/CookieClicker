@@ -76,25 +76,25 @@ var multiclickItems = [
   {
     name: "Coal",
     initialCost: 25000,
-    rate: 20,
+    rate: 30,
     description: "Burn those fossil fuels!"
   },
   {
     name: "Methane",
     initialCost: 420420,
-    rate: 100,
+    rate: 200,
     description: "Smells bad, but great for cooking!"
   },
   {
     name: "Flame Thrower",
     initialCost: 7777777,
-    rate: 575,
+    rate: 1250,
     description: "Light 'em up!"
   },
   {
     name: "C4",
     initialCost: 31415926,
-    rate: 2500,
+    rate: 7500,
     description: "Caution: Explosive."
   }
 ];
