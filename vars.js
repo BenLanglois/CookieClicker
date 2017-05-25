@@ -4,10 +4,11 @@ var cpc = 1;
 var showHelp = true;
 
 var images = {
-  chocolateChip: "http://images.clipartpanda.com/chocolate-chip-cookie-clipart-mordida_do_biscoito_dos_desenhos_animados_escultura_fotografias-r56b8af72f9664abab0be513d37b081d1_x7sa6_8byvr_512.jpg",
-  oreo: "http://cdn.skim.gs/image/upload/v1456337658/msi/oreo-cookie-isolated_s9xwjo.jpg",
-  oatmealRaisin: "https://soulfullysweet.com/wp-content/uploads/2015/05/crop-oatmeal-cookie.jpg"
-}
+  "Chocolate Chip": "http://images.clipartpanda.com/chocolate-chip-cookie-clipart-mordida_do_biscoito_dos_desenhos_animados_escultura_fotografias-r56b8af72f9664abab0be513d37b081d1_x7sa6_8byvr_512.jpg",
+  "Oreo": "http://cdn.skim.gs/image/upload/v1456337658/msi/oreo-cookie-isolated_s9xwjo.jpg",
+  "M&M Cookie": "https://cdn.shopify.com/s/files/1/0302/2969/products/great-cookie-m_and_m-cookie-03_1024x1024.jpg?v=1390499314",
+  "Oatmeal Raisin": "https://soulfullysweet.com/wp-content/uploads/2015/05/crop-oatmeal-cookie.jpg"
+};
 
 /*
 Copy for new item:

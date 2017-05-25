@@ -16,8 +16,17 @@ window.onload = function() {
   document.getElementById("cpc").innerHTML = cpc;
   createACT();
   createMCT();
-  updateSelect();
+  createSelect();
 };
+
+function createSelect() {
+  var select = "";
+  for (var image in images) {
+    select += "<option value='" + image + "'>" + image + "</option>";
+  }
+  document.getElementById("select").innerHTML = select;
+  updateSelect();
+}
 
 function updateSelect() {
   document.getElementById("img").src = images[document.getElementById("select").value]
@@ -30,7 +39,7 @@ setInterval(function() {
   if (showHelp && cookies >= 100) {
     document.getElementById("help").style.display="none";
     showHelp = false;
-  };
+  }
 }, 1000);
 
 function bakeCookie() {
