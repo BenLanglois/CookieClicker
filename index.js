@@ -29,7 +29,7 @@ function createSelect() {
 }
 
 function updateSelect() {
-  document.getElementById("img").src = images[document.getElementById("select").value]
+  document.getElementById("img").src = images[document.getElementById("select").value];
 }
 
 setInterval(function() {
@@ -43,7 +43,7 @@ setInterval(function() {
 }, 1000);
 
 function bakeCookie() {
-  cookies += cpc;
+  cookies += cpc; // Multiclicks
   document.getElementById("cookieCount").innerHTML = cookies;
   updateBuy();
 }
@@ -52,7 +52,7 @@ function buyAutoclick(index) {
   item = autoclickItems[index];
   if (cookies >= item.cost) {
     cookies -= item.cost;
-    item.quantity += 1;
+    item.quantity++;
     item.cost = Math.floor(item.initialCost * Math.pow(3, 0.1 * item.quantity));
     cps += item.rate;
     updateACT();
@@ -64,7 +64,7 @@ function buyMulticlick(index) {
   item = multiclickItems[index];
   if (cookies >= item.cost) {
     cookies -= item.cost;
-    item.quantity += 1;
+    item.quantity++;
     item.cost = Math.floor(item.initialCost * Math.pow(3, 0.1 * item.quantity));
     cpc += item.rate;
     updateMCT();

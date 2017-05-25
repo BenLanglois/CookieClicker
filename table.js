@@ -1,7 +1,7 @@
 function createACT() {
 	var table = document.getElementById("acTable");
 	for (var index in autoclickItems) {
-		var item = autoclickItems[index]
+		var item = autoclickItems[index];
 		var tableLength = table.rows.length;
 		table.insertRow(tableLength).outerHTML = "<tr>" +
 			"<td>" + item.name + "</td>" +
@@ -16,7 +16,7 @@ function createACT() {
 function createMCT() {
 	var table = document.getElementById("mcTable");
 	for (var index in multiclickItems) {
-		var item = multiclickItems[index]
+		var item = multiclickItems[index];
 		var tableLength = table.rows.length;
 		table.insertRow(tableLength).outerHTML = "<tr>" +
 			"<td>" + item.name + "</td>" +
