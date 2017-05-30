@@ -1,21 +1,9 @@
-for (var index in autoclickItems) {
-  item = autoclickItems[index];
-  item.cost = item.initialCost;
-  item.quantity = 0;
-} // Add cost & quantity properties
-
-for (var index in multiclickItems) {
-  item = multiclickItems[index];
-  item.cost = item.initialCost;
-  item.quantity = 0;
-} // Add cost & quantity properties
-
 window.onload = function() {
   document.getElementById("cookieCount").innerHTML = cookies;
   document.getElementById("cps").innerHTML = cps;
   document.getElementById("cpc").innerHTML = cpc;
-  createACT();
-  createMCT();
+  createTable(acTableData, document.getElementById("acTable"));
+  createTable(mcTableData, document.getElementById("mcTable"));
   createSelect();
 };
 

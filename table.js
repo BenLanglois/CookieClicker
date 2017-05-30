@@ -1,31 +1,33 @@
-function createACT() {
-	var table = document.getElementById("acTable");
-	for (var index in autoclickItems) {
-		var item = autoclickItems[index];
-		var tableLength = table.rows.length;
-		table.insertRow(tableLength).outerHTML = "<tr>" +
-			"<td>" + item.name + "</td>" +
-			"<td class='buy' id='buy" + item.name + "' onclick='buyAutoclick(" + index + ")'>$$$</td>" +
-    	"<td id='quantity" + item.name + "'>" + item.quantity + "</td>" +
-    	"<td id='cost" + item.name + "'>" + item.cost + "</td>" +
-    	"<td>+" + item.rate + "</td>" +
-    	"<td>" + item.description + "</td></tr>";
-	}
+acTableData = [["Item", "Buy", "Quantity", "Cost", "Cookies per Second", "Description"]];
+
+mcTableData = [["Item", "Buy", "Quantity", "Cost", "Cookies per Click", "Description"]];
+
+for (var index in autoclickItems) {
+  var item = autoclickItems[index];
+  item.cost = item.initialCost;
+  item.quantity = 0;
+  acTableData.push([
+    item.name,
+    {data: "$$$", class: "buy", id: "buy" + item.name, onclick: "buyAutoclick(" + index + ")"},
+    {data: item.quantity, id: "quantity" + item.name},
+    {data: item.cost, id: "cost" + item.name},
+    "+" + item.rate,
+    item.description
+  ])
 }
 
-function createMCT() {
-	var table = document.getElementById("mcTable");
-	for (var index in multiclickItems) {
-		var item = multiclickItems[index];
-		var tableLength = table.rows.length;
-		table.insertRow(tableLength).outerHTML = "<tr>" +
-			"<td>" + item.name + "</td>" +
-			"<td class='buy' id='buy" + item.name + "' onclick='buyMulticlick(" + index + ")'>$$$</td>" +
-    	"<td id='quantity" + item.name + "'>" + item.quantity + "</td>" +
-    	"<td id='cost" + item.name + "'>" + item.cost + "</td>" +
-    	"<td>+" + item.rate + "</td>" +
-    	"<td>" + item.description + "</td></tr>";
-	}
+for (var index in multiclickItems) {
+  var item = multiclickItems[index];
+  item.cost = item.initialCost;
+  item.quantity = 0;
+  mcTableData.push([
+    item.name,
+    {data: "$$$", class: "buy", id: "buy" + item.name, onclick: "buyMulticlick(" + index + ")"},
+    {data: item.quantity, id: "quantity" + item.name},
+    {data: item.cost, id: "cost" + item.name},
+    "+" + item.rate,
+    item.description
+  ])
 }
 
 function updateACT() {
