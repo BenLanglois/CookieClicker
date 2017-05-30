@@ -12,7 +12,7 @@ function createTable(dataList, table) {
 	}
 }
 
-function createRow(dataList, row, dataType, rowClass = null, rowID = null, rowOnclick = null) {
+function createRow(dataList, row, dataType, rowClass, rowID, rowOnclick) {
 	for (var dataI in dataList) {
 		var data = dataList[dataI]
 		var cell = document.createElement(dataType);
